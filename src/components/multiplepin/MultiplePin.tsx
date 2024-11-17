@@ -23,7 +23,7 @@ import {
   Pin,
 } from "@vis.gl/react-google-maps";
 import { Circle } from "./circle";
-import config from "../../config";
+import config from "../../../config";
 
 type Poi = { key: string; location: google.maps.LatLngLiteral };
 const locations: Poi[] = [

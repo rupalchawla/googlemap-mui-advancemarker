@@ -1,6 +1,6 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
-import MultiplePin from "./components/MultiplePin";
+import MultiplePin from "./components/multiplepin/MultiplePin";
 import CustomPin from "./components/custompin/CustomPin";
 import MenuIcon from "@mui/icons-material/Menu";
 
@@ -10,6 +10,7 @@ import {
   Toolbar,
   Button,
 } from "@mui/material";
+import PinInteraction from "./components/advancepininteraction/PinInteraction";
 
 const App = () => {
   const [page, setPage] = React.useState("CustomPin");
@@ -23,6 +24,8 @@ const App = () => {
         return <MultiplePin />;
       case "CustomPin":
         return <CustomPin />;
+        case "Interaction":
+        return <PinInteraction />;
     }
   }
 
@@ -31,10 +34,13 @@ const App = () => {
       <AppBar position="static">
         <Toolbar>
           <Button color="inherit" onClick={() => handleClick("MultiplePin")}>
-            Multiple Pin & Circle
+            Multiple Pins
           </Button>
           <Button color="inherit" onClick={() => handleClick("CustomPin")}>
-            Custom Pin & Ino Window
+            Custom Pins
+          </Button>
+          <Button color="inherit" onClick={() => handleClick("Interaction")}>
+            Interaction
           </Button>
         </Toolbar>
       </AppBar>
