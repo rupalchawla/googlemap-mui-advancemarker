@@ -1,4 +1,4 @@
-# Google AdvanceMarker With MUI
+# Google Map AdvanceMarker With MUI
 
 [![GNU License](https://img.shields.io/badge/GNU_General-License-blue)](https://github.com/rupalchawla/googlemap-mui-advancemarker/blob/main/LICENSE)
 
