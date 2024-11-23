@@ -11,8 +11,12 @@ import {
   Button,
 } from "@mui/material";
 import PinInteraction from "./components/advancepininteraction/PinInteraction";
+import { APIProvider } from "@vis.gl/react-google-maps";
+import config from "../config";
+
 
 const App = () => {
+  const API_KEY = config.API_KEY;
   const [page, setPage] = React.useState("CustomPin");
   const handleClick = (page: string) => {
     setPage(page);
@@ -44,8 +48,13 @@ const App = () => {
           </Button>
         </Toolbar>
       </AppBar>
-
+      <APIProvider
+    apiKey={API_KEY}
+    onLoad={() => console.log("Maps API has loaded.")}
+    libraries={['marker']}
+  >
       {renderPage()}
+      </APIProvider>
     </Box>
   );
 };

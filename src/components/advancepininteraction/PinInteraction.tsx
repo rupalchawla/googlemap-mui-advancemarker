@@ -76,7 +76,7 @@ const PinInteraction = () => {
   );
 
   return (
-    <APIProvider apiKey={API_KEY} libraries={['marker']}>
+    <>
       <Map
         mapId={'bf51a910020fa25a'}
         defaultZoom={12}
@@ -179,7 +179,7 @@ const PinInteraction = () => {
           setAnchorPoint(newAnchorPoint)
         }
       />
-    </APIProvider>
+    </>
   );
 };
 
